@@ -61,11 +61,15 @@ def copy_button3(event=''):
   except:
     pass
 
+#def setclipboard(text):
+  #r = tk.Tk()
+  #r.clipboard_clear()
+  #r.clipboard_append(text)
+  #r.destroy()
 def setclipboard(text):
-  r = tk.Tk()
-  r.clipboard_clear()
-  r.clipboard_append(text)
-  r.destroy()
+    plugin_app.status.clipboard_clear()
+    plugin_app.status.clipboard_append(text)
+    plugin_app.status.update()
 
 def plugin_start3(plugin_dir):
     return plugin_start()
